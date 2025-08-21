@@ -27,12 +27,6 @@ def has_upper_letters(password):
     else:
         score = 0
     return score
-not_full = [
-    score(password),
-    has_digit(password),
-    has_lower_letters(password), 
-    has_upper_letters(password)
-    ]
 def has_symbols(password):
     score = 0
     if not has_digit(password) and has_lower_letters(password) and has_upper_letters(password) and score(password) in password:
