@@ -1,53 +1,36 @@
 password = input('Введите пароль: ')
-def score(password):
-    score = 0
-    if len(password) > 11:
-        score += 2
-    else:
-        score = 0
-    return score
+
+def sumlength(password):
+    return any(len(password) > 11 in password)
+
 def has_digit(password):
-    score = 0
-    if any(letter.isdigit() for letter in password):
-        score += 2
-    else:
-        score = 0
-    return score
+    return any(letter.isdigit() for letter in password)
+
 def has_lower_letters(password):
-    score = 0
-    if any(has_lower_letters.islower() for has_lower_letters in password):
-        score += 2
-    else:
-        score = 0
-    return score
+    return any(has_lower_letters.islower() for has_lower_letters in password)
+
 def has_upper_letters(password):
-    score = 0
-    if any(has_upper_letters.isupper() for has_upper_letters in password):
-        score += 2
-    else:
-        score = 0
-    return score
-def has_symbols(password):
-    score = 0
-    if not has_digit(password) and has_lower_letters(password) and has_upper_letters(password) and score(password) in password:
-        score += 2
-    else:
-        score = 0
-    return score
-check = [
-    score(password),
-    has_digit(password),
-    has_lower_letters(password), 
-    has_upper_letters(password),
-    has_symbols(password)
-    ]
-sum_func = 0
-for function in check:
-    sum_func += function
-print('Рейтинг пароля: ', sum_func)
-if __name__ == '__main__':
-    has_digit(password),
-    has_lower_letters(password),
-    has_upper_letters(password),
-    has_symbols(password),
-    score(password)
+    return any(has_upper_letters.isupper() for has_upper_letters in password)
+
+def number(password):
+    return any(not sumlength(password) and has_digit(password) and has_lower_letters(password) and has_upper_letters(password) for number in password)
+
+def total(password):
+    sum_func = 0
+    check = [
+        sumlength(password),
+        has_digit(password),
+        has_lower_letters(password), 
+        has_upper_letters(password),
+        number(password)
+        ]
+    for function in check:
+        if function == True:
+            sum_func += 2
+    return sum_func
+    print('Рейтинг пароля: ', sum_func)
+
+def main():
+    if __name__ == '__main__':
+        total(password),
+        main()
