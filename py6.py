@@ -17,7 +17,7 @@ def has_upper_letters(password):
 def has_symbols(password):
     return any(has_symbols.isalnum() for has_symbols in password)
 
-def total(password):
+def main(password):
     sum_func = 0
     check = [
         sumlength(password),
@@ -29,10 +29,6 @@ def total(password):
     for function in check:
         if function == True:
             sum_func += 2
-    return sum_func
-    print(sum_func)
-    if __name__ == '__main__':
-        total(password)
-
     print('Рейтинг пароля', sum_func)
-    main()
+if __name__ == '__main__':
+    main(password)
