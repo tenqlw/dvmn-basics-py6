@@ -1,3 +1,4 @@
+global password
 password = input('Введите пароль: ')
 
 
@@ -34,5 +35,7 @@ def main():
         if function == True:
             sum_func += 2
     print('Рейтинг пароля', sum_func)
+
+
 if __name__ == '__main__':
     main()
