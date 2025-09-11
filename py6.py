@@ -1,7 +1,3 @@
-global password
-password = input('Введите пароль: ')
-
-
 def sumlength(password):
     return(len(password) > 11)
 
@@ -23,6 +19,7 @@ def has_symbols(password):
 
 
 def main():
+    password = input('Введите пароль: ')
     sum_func = 0
     check = [
         sumlength(password),
