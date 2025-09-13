@@ -1,5 +1,5 @@
 def sumlength(password):
-    return(len(password) > 11)
+    return len(password) > 11
 
 
 def has_digit(password):
